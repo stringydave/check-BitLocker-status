@@ -26,7 +26,9 @@ using the Run as Administrator option, and then try running the script again.
 
 @author Dave Evans <https://github.com/stringydave>
 @licence MIT
-@version 0.0.1
+@version 0.0.2
+
+24/03/23  dce  add TPM Presence
 #>
 
 
@@ -85,6 +87,10 @@ function Get-Chassis-Type {
 
 $chassis = Get-Chassis-Type
 Write-Host "BitLocker-Chassis:"  $chassis
+
+# does this machine have a TPM
+$TpmPresent = Get-Tpm | select TpmPresent
+Write-Host "BitLocker-TPM:"  $TpmPresent
 
 # get protection status for SystemDrive
 $BitLockerSysVolume = Get-BitLockerVolume -MountPoint $env:SystemDrive | Select-Object  "ProtectionStatus"
