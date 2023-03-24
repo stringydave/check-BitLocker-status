@@ -1,0 +1,7 @@
+The script 'check-bitlocker-status.ps1' cannot be run because it contains a "#requires" statement for running as 
+Administrator. The current Windows PowerShell session is not running as Administrator. Start Windows PowerShell by  
+using the Run as Administrator option, and then try running the script again.
+    + CategoryInfo          : PermissionDenied: (check-bitlocker-status.ps1:String) [], ParentContainsErrorRecordExcep 
+   tion
+    + FullyQualifiedErrorId : ScriptRequiresElevation
+ 
